@@ -1,0 +1,26 @@
+﻿@model lab11.Models.generateRandomNumber
+@{
+    ViewData["Title"] = "PassUsingModel";
+    var firstNumber = @Model.firstNumber;
+    var secondNumber = @Model.secondNumber;
+}
+
+
+<h2>PassUsingModel</h2>
+
+<div><strong>Rand Value First: @firstNumber</strong></div>
+<div><strong>Rand Value Second: @secondNumber</strong></div>
+
+<strong>Add:</strong>
+<p>@firstNumber + @secondNumber = @(firstNumber + secondNumber)</p>
+
+<strong>Sub:</strong>
+<p>@firstNumber - @secondNumber = @(firstNumber - secondNumber)</p>
+
+<strong>Mult:</strong>
+<p>@firstNumber * @secondNumber = @(firstNumber * secondNumber)</p>
+
+<strong>Div:</strong>
+<p>@(firstNumber) / @secondNumber = @(secondNumber != 0 ? Math.Floor((double)firstNumber / secondNumber) : "error")</p>
+@{
+}

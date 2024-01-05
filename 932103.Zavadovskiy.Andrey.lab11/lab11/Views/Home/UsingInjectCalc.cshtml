@@ -1,0 +1,27 @@
+﻿@using lab11.Services
+@inject IGetData GetDataService
+@{
+    ViewData["Title"] = "PassUsingModel";
+    var firstNumber = GetDataService.getNumber();
+    var secondNumber = GetDataService.getNumber();
+}
+
+
+<h2>AccessServiceDirectly</h2>
+
+<div><strong>Rand Value First: @firstNumber</strong></div>
+<div><strong>Rand Value Second: @secondNumber</strong></div>
+
+<strong>Add:</strong>
+<p>@firstNumber + @secondNumber = @(GetDataService.add(firstNumber, secondNumber))</p>
+
+<strong>Sub:</strong>
+<p>@firstNumber - @secondNumber = @GetDataService.sub(firstNumber, secondNumber)</p>
+
+<strong>Mult:</strong>
+<p>@firstNumber * @secondNumber = @GetDataService.mult(firstNumber, secondNumber)</p>
+
+<strong>Div:</strong>
+<p>@(firstNumber) / @secondNumber = @GetDataService.div(firstNumber, secondNumber)</p>
+@{
+}
